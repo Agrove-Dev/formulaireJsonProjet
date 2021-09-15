@@ -71,6 +71,13 @@ html {
     margin-top: 12px!important;
 }
 
+.validate {
+    height:100px;
+    margin:auto;
+    width:100px;
+    margin-top: 15px;
+}
+
 .footer {
     height: 100px;
     width: 50px;

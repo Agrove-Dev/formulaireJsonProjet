@@ -24,7 +24,7 @@
 
     
     <div class="nameOfPlant">
-
+        <form>
         <div id="title">Nom de la plante</div>
         <!-- FORMULAIRE-->
         
@@ -43,22 +43,22 @@
             
             <form>
                 <div>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
                 </div>
               </form>
     
     </div>
 
     <div class="plantCategorie">
-        <div id="title">Catégorie</div>
+        <div id="title">Filtre</div>
 
-        <select class="form-select" multiple aria-label="multiple select example">
-            <option selected>Légumes</option>
-            <option value="1">Fruits</option>
-            <option value="2">Fleurs</option>
-            <option value="3">Aromates</option>
-            <option value="3">Plantes mélifères</option>
-            <option value="3">Plantes médicinales</option>
+        <select multiple class="form-select" id="selectCategorie" aria-label="multiple select example">
+            <option id="legumes" value="true">Légumes</option>
+            <option id="fruits" value="true">Fruits</option>
+            <option id="fleurs" value="true">Fleurs</option>
+            <option id="aromates" value="true">Aromates</option>
+            <option id="plantesMeliferes" value="true">Plantes mélifères</option>
+            <option id="plantesMedicinales" value="true">Plantes médicinales</option>
           </select>
     </div>
 
@@ -145,9 +145,14 @@
     <div class="flowingEnd">
 
     </div>
+</form>
+    <div class="validate">
+        <button type="button" class="btn btn-primary" onclick="initForm()">Valider</button>
+    </div>
 
     <div class="footer">
         
     </div>
 </body>
+<script src="form.js"></script>
 </html>
