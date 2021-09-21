@@ -5,38 +5,63 @@
 // rq
 let namePlant = document.getElementById("exampleFormControlInput1");
 let descriptionPlant = document.getElementById("exampleFormControlInput2");
-let categorieSelected = document.getElementById("selectCategorie");
-let categorie = ["legumes", "fruits", "aromates", "plantesMeliferes", "plantesMedicinales"];
+let categorieSelected = document.querySelectorAll("selectCategorie");
 
+var association = new Object();
+association["ail"] = true;
+association["begonia"] = true;
+association["capucine"] = true;
+association["cassis"] = true;
+association["cerfeuil"] = true;
+association["cosmos"] = true;
+
+var characteristic = new Object();
+characteristic["exhibition"] = -1;
+characteristic["height"] = "";
+characteristic["ph"] = -1;
+characteristic["rusticite"] = -1;
+characteristic["usda"] = -1;
+characteristic["water"] = -1;
+
+var filtre = new Object();
+
+var exposition
+
+var flowingPeriod = new Object();
+flowingPeriod["endMonth"] = -1;
+flowingPeriod["startMonth"] = -1;
+
+var harvestPeriod = new Object();
+harvestPeriod["endMonth"] = -1;
+harvestPeriod["startMonth"] = -1;
+
+var plantingPeriod = new Object();
+plantingPeriod["endMonth"] = -1;
+plantingPeriod["startMonth"] = -1;
+
+var sowingPeriod = new Object();
+sowingPeriod["endMonth"] = -1;
+sowingPeriod["startMonth"] = -1;
 
 function initForm() {
-    var selected = [];
-    for(i=0; i < categorie.length; i++) {
-        for (var option of document.getElementById(categorieSelected).options){
+
+    for (var option of document.getElementById('selectCategorie').options)
+    {
         if (option.selected) {
-            selected.push(option.value);
+            filtre[option.value] = true;
         }
     }
-    }
-    
-    console.log("est selected : " + selected);
-console.log("Ma categorie :"  + categorieSelected.type);
+
     let data = {
         "name" : namePlant.value,
         "description" : descriptionPlant.value,
-        
-        "characteristic": {
-                "id": true,
-                },
-
-        "description": "Bonjour",
-        "flowingPeriod": {
-        "id": true,
-
-        },
-        "harvestPeriod": {
-            "id": true,
-        }
+        association,
+        characteristic,
+        filtre,
+        flowingPeriod,
+        harvestPeriod,
+        plantingPeriod,
+        sowingPeriod
     };
     console.log(data);
 }

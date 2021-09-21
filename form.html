@@ -50,69 +50,73 @@
     </div>
 
     <div class="plantCategorie">
-        <div id="title">Filtre</div>
+        <div id="title">Catégorie</div>
 
-        <select multiple class="form-select" id="selectCategorie" aria-label="multiple select example">
-            <option id="legumes" value="true">Légumes</option>
-            <option id="fruits" value="true">Fruits</option>
-            <option id="fleurs" value="true">Fleurs</option>
-            <option id="aromates" value="true">Aromates</option>
-            <option id="plantesMeliferes" value="true">Plantes mélifères</option>
-            <option id="plantesMedicinales" value="true">Plantes médicinales</option>
+        <select multiple="multiple" class="form-select" id="selectCategorie" aria-label="multiple select example">
+            <option id="legumes" value="legumes">Légumes</option>
+            <option id="fruits" value="fruits">Fruits</option>
+            <option id="fleurs" value="fleurs">Fleurs</option>
+            <option id="aromates" value="aromates">Aromates</option>
+            <option id="plantesMeliferes" value="plantesmeliferes">Plantes mélifères</option>
+            <option id="plantesMedicinales" value="plantesmedicinales">Plantes médicinales</option>
           </select>
     </div>
 
     <div class="plantCharacteristic">
-        <div id="title">Caractéristiques de la plante</div>
+        <div id="title">Caractéristiques de la plante (+)</div>
 
-    </div>
-
-    <div class="plantExposition">
-        <div id="title">Exposition au soleil</div>
+        <div id="sous_title">⊝ Hauteur moyenne de la plante</div>
+        <div id="blocHeight">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">cm</span>
+            </div>
+            <input type="text" id="inputBoot" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <div id="sous_title">⊝ Exposition au soleil</div>
         <select class="form-select" multiple aria-label="multiple select example">
             <option selected>Ombre</option>
             <option value="1">Mi-ombre</option>
             <option value="2">Ensoleillé</option>
           </select>
+
+          <div id="sous_title">⊝ Besoin en eau</div>
+          <select class="form-select" multiple aria-label="multiple select example">
+              <option selected>Faible</option>
+              <option value="1">Moyen</option>
+              <option value="2">Fort</option>
+            </select>
+
+            <div id="sous_title">⊝ Rusticité</div>
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option selected>Faible</option>
+                <option value="1">Moyen</option>
+                <option value="2">Forte</option>
+              </select>
+
+              <div id="sous_title">⊝ Usda</div>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Sélectionner</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+
+              <div id="sous_title">⊝ PH</div>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>Sélectionner</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
     </div>
 
-    <div class="eauPlantNeeded">
-        <div id="title">Besoin en eau</div>
-        <select class="form-select" multiple aria-label="multiple select example">
-            <option selected>Faible</option>
-            <option value="1">Moyen</option>
-            <option value="2">Fort</option>
-          </select>
-    </div>    
 
-    <div class="plantRusticity">
-        <div id="title">Rusticité</div>
-        <select class="form-select" multiple aria-label="multiple select example">
-            <option selected>Faible</option>
-            <option value="1">Moyen</option>
-            <option value="2">Forte</option>
-          </select>
-    </div>   
+   
 
-    <div class="usda">
-        <div id="title">USDA</div>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Sélectionner</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-    </div>
 
-    <div class="ph">
-        <div id="title">PH</div>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Sélectionner</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-    </div>
+
 
     <div class="plantExposition">
         
