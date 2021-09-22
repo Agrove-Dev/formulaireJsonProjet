@@ -30,7 +30,7 @@
         
         <form>
             <div>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Lorem ipsum">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
             </div>
           </form>
 
@@ -43,7 +43,7 @@
             
             <form>
                 <div>
-                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="">
                 </div>
               </form>
     
@@ -71,87 +71,183 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-sm">cm</span>
             </div>
-            <input type="text" id="inputBoot" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" id="characteristicHeight" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </div>
         </div>
+
+
         <div id="sous_title">⊝ Exposition au soleil</div>
-        <select class="form-select" multiple aria-label="multiple select example">
-            <option selected>Ombre</option>
-            <option value="1">Mi-ombre</option>
-            <option value="2">Ensoleillé</option>
+        <select class="form-select" aria-label="multiple select example" id="characteristicExposition">
+            <option value=1>Ombre</option>
+            <option value=2>Mi-ombre</option>
+            <option value=3>Ensoleillé</option>
           </select>
 
           <div id="sous_title">⊝ Besoin en eau</div>
-          <select class="form-select" multiple aria-label="multiple select example">
-              <option selected>Faible</option>
-              <option value="1">Moyen</option>
-              <option value="2">Fort</option>
+          <select class="form-select" aria-label="multiple select example" id="characteristicWater">
+              <option value=1>Faible</option>
+              <option value=2>Moyen</option>
+              <option value=3>Fort</option>
             </select>
 
             <div id="sous_title">⊝ Rusticité</div>
-            <select class="form-select" multiple aria-label="multiple select example">
-                <option selected>Faible</option>
-                <option value="1">Moyen</option>
-                <option value="2">Forte</option>
+            <select class="form-select" aria-label="multiple select example" id="characteristicRusticite">
+                <option value=1>Faible</option>
+                <option value=2>Moyen</option>
+                <option value=3>Forte</option>
               </select>
 
               <div id="sous_title">⊝ Usda</div>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Sélectionner</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <select class="form-select" aria-label="Default select example" id="characteristicUsda">
+                <option value="1a">Zone 1a : -51,1 à -48,3°C</option>
+                <option value="1b">Zone 1b : -48,3 à -45,6°C</option>
+                <option value="2a">Zone 2a : -45,6 à -42,8°C</option>
+                <option value="2b">Zone 2b : -42,8 à -40°C</option>
+                <option value="3a">Zone 3a : -40 à -37,2°C</option>
+                <option value="3b">Zone 3b : -37,2 à -34,4°C</option>
+                <option value="4a">Zone 4a : -34,4 à -31,7°C</option>
+                <option value="4b">Zone 4b : -31,7 à -28,9°C</option>
+                <option value="5a">Zone 5a : -28,9 à -26,1°C</option>
+                <option value="5b">Zone 5b : -26,1 à -23,3°C</option>
+                <option value="6a">Zone 6a : -23,3 à -20,6°C</option>
+                <option value="6b">Zone 6b : -20,6 à -17,8°C</option>
+                <option value="7a">Zone 7a : -17,8 à -15°C</option>
+                <option value="7b">Zone 7b : -15 à -12,2°C</option>
+                <option value="8a">Zone 8a : -12,2 à -9,4°C</option>
+                <option value="8b">Zone 8b : -9,4 à -6,7°C</option>
+                <option value="9a">Zone 9a : -6,7 à -3,9°C</option>
+                <option value="9b">Zone 9b : -3,9 à 1,1°C</option>
+                <option value="10a">Zone 10a : -1,1 à 1,7°C</option>
+                <option value="10b">Zone 10b : 1,7 à 4,4°C</option>
+                <option value="11a">Zone 11a : 4,4 à 7,2°C</option>
+                <option value="11b">Zone 11b : 7,2 à 10°C</option>
+                <option value="12a">Zone 12a : 10 à 12,8°C</option>
+                <option value="12b">Zone 12b : 12,8 à 15,7°C</option>
+                <option value="13a">Zone 13a : 15,7 à 18,3°C</option>
+                <option value="13b">Zone 13b : 18,3 à 21,1°C</option>
+
+            </select>
 
               <div id="sous_title">⊝ PH</div>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" id="characteristicPh">
                   <option selected>Sélectionner</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value=1>1</option>
+                  <option value=2>2</option>
+                  <option value=3>3</option>
+                  <option value=4>4</option>
+                  <option value=5>5</option>
+                  <option value=6>6</option>
+                  <option value=7>7</option>
+                  <option value=8>8</option>
+                  <option value=9>9</option>
+                  <option value=10>10</option>
+                  <option value=11>11</option>
+                  <option value=12>12</option>
+                  <option value=13>13</option>
+                  <option value=14>14</option>
                 </select>
     </div>
 
-
-   
-
-
-
-
-    <div class="plantExposition">
-        
-    </div>
-
-    <div class="maxHeightPlant">
-        
-    </div>
-
     <div class="sowingBegin">
-
+        <div id="title">Période de semis</div>
+        <div id="blocHeight">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">start</span>
+            </div>
+            <input type="text" id="semisStart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <div id="blocHeight">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">end</span>
+                </div>
+                <input type="text" id="semisEnd" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            </div>
     </div>
 
-    <div class="sowingEnd">
 
-    </div>
 
     <div class="harvestBegin">
-
+        <div id="title">Période de récolte</div>
+        <div id="blocHeight">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">start</span>
+            </div>
+            <input type="text" id="recolteStart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <div id="blocHeight">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">end</span>
+                </div>
+                <input type="text" id="recolteEnd" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            </div>
     </div>
 
-    <div class="harvestEnd">
-
-    </div>
+  
 
     <div class="flowingBegin">
-
+        <div id="title">Période de floraison</div>
+        <div id="blocHeight">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">start</span>
+            </div>
+            <input type="text" id="floraisonStart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <div id="blocHeight">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">end</span>
+                </div>
+                <input type="text" id="floraisonEnd" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            </div>
     </div>
 
-    <div class="flowingEnd">
-
+    <div class="plantationBegin">
+        <div id="title">Période de plantation</div>
+        <div id="blocHeight">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">start</span>
+            </div>
+            <input type="text" id="plantationStart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <div id="blocHeight">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">end</span>
+                </div>
+                <input type="text" id="plantationEnd" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            </div>
     </div>
+
+    <!-- <div class="plantAssociation">
+        <div id="title">Association</div>
+
+        <select multiple="multiple" class="form-select" id="selectCategorie" aria-label="multiple select example">
+            <option id="legumes" value="ail">Légumes</option>
+            <option id="fruits" value="fruits">Fruits</option>
+            <option id="fleurs" value="fleurs">Fleurs</option>
+            <option id="aromates" value="aromates">Aromates</option>
+            <option id="plantesMeliferes" value="plantesmeliferes">Plantes mélifères</option>
+            <option id="plantesMedicinales" value="plantesmedicinales">Plantes médicinales</option>
+          </select>
+    </div> -->
+
 </form>
     <div class="validate">
-        <button type="button" class="btn btn-primary" onclick="initForm()">Valider</button>
+        <button type="button" class="btn btn-primary" onclick="initForm()" onclick="createForm()">Valider</button>
     </div>
 
     <div class="footer">
@@ -159,4 +255,5 @@
     </div>
 </body>
 <script src="form.js"></script>
+<script src="createForm.js"></script>
 </html>

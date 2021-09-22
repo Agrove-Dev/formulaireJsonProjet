@@ -39,7 +39,7 @@ html {
     margin: 0;
  }
 
-.nameOfPlant, .plantDescription, .plantCategorie, .plantCharacteristic, .plantExposition, .eauPlantNeeded, .plantRusticity, .usda, .ph, .plantExposition, .maxHeightPlant, .sowingBegin, .sowingEnd, .harvestBegin, .harvestEnd, .flowingBegin, .flowingEnd {
+.nameOfPlant, .plantDescription, .plantCategorie, .plantAssociation, .plantCharacteristic, .plantExposition, .eauPlantNeeded, .plantRusticity, .usda, .ph,.plantationBegin, .sowingBegin, .sowingEnd, .harvestBegin, .harvestEnd, .flowingBegin, .flowingEnd {
     background-color: white;
     height: auto;
     width: 30%;
@@ -53,10 +53,6 @@ html {
 #blocHeight {
     width:99%;
     margin:auto;
-}
-
-.input-group-prepend{
-
 }
 
 #title {
