@@ -9,7 +9,7 @@ function download(filename, data) {
     element.click();
   
     document.body.removeChild(element);
-    download(filename+".json","File content");
   }
   
   // Start file download.
+  download(filename+".json","File content");

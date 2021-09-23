@@ -1,17 +1,18 @@
-//LOG AGROVE ACCOUNT LOGIN
-let adminId = "AgroveDev";
-let adminPwd = "Agr0v3fra";
-
-let idAcc = document.getElementById("login");
-let pwdAcc = document.getElementById("password");
+//DOM INTERFACE
+let namePlant = document.getElementById("exampleFormControlInput1");
+let descriptionPlant = document.getElementById("exampleFormControlInput2");
+let categorieSelected = document.querySelectorAll("selectCategorie");
+let characteristicHeight = document.getElementById("characteristicHeight");
 let screenOut = document.getElementById("login-out");
 let screenIn = document.getElementById("login-in");
 let bandeau = document.getElementById("bandeau-error");
 let msgError = document.getElementById("msg-error");
 bandeau.style.padding = "0px";
+//END DOM INTERFACE
 
 function log() {
     if (adminId == idAcc.value && adminPwd == pwdAcc.value) {
+        createCookie(); //FOR CREATE A COOKIE
         msgError.style.visibility = "hidden";
         bandeau.style.visibility = "hidden";
         msgError.style.display = "none";
@@ -85,29 +86,9 @@ function forgot() {
 
 }
 
-//INTERFACE VISUEL
-let namePlant = document.getElementById("exampleFormControlInput1");
-let descriptionPlant = document.getElementById("exampleFormControlInput2");
-let categorieSelected = document.querySelectorAll("selectCategorie");
-let characteristicHeight = document.getElementById("characteristicHeight");
-
-
-
 var association = new Object();
-// association["ail"] = true;
-// association["begonia"] = true;
-// association["capucine"] = true;
-// association["cassis"] = true;
-// association["cerfeuil"] = true;
-// association["cosmos"] = true;
 
 var characteristic = new Object();
-characteristic["exhibition"] = -1;
-characteristic["height"] = "";
-characteristic["ph"] = -1;
-characteristic["rusticite"] = -1;
-characteristic["usda"] = -1;
-characteristic["water"] = -1;
 
 var filtre = new Object();
 
@@ -165,6 +146,20 @@ function initForm() {
         }
     }
 
+    //GET ALL VALUE OF GOOD ASSOCIATION
+    for (var option of document.getElementById('selectGoodAssociation').options) {
+        if (option.selected) {
+            association[option.value] = true;
+        }
+    }
+
+      //GET ALL VALUE OF BAD ASSOCIATION
+      for (var option of document.getElementById('selectBadAssociation').options) {
+        if (option.selected) {
+            association[option.value] = false;
+        }
+    }
+
     characteristic["height"] = characteristicHeight.value;
     sowingPeriod["startMonth"] = parseInt(document.getElementById("semisStart").value);
     sowingPeriod["endMonth"] = parseInt(document.getElementById("semisEnd").value);
@@ -176,6 +171,7 @@ function initForm() {
     plantingPeriod["endMonth"] = parseInt(document.getElementById("plantationEnd").value);
 
     let data = {
+        association,
         "name": namePlant.value,
         "description": descriptionPlant.value,
         characteristic,
@@ -187,5 +183,5 @@ function initForm() {
     };
 
     download("plant", data);
-    console.log(data);
+    console.log("code by Lorenzo\n" + data);
 }

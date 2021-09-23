@@ -10,15 +10,26 @@ html {
     display: flex;
 
     align-items: center;
+    justify-content: center;
     background-color:#72d1a4;
 }
+
+#tips {
+  font-size: 12px;
+  margin-top: 8px;
+  margin-left: 6px;
+  color: #0d0d0da8;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+}
+
 #headTxt {
     color:white;
-    font-size: 14px;
+    font-size: 18px;
     
     font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif
-}
+    font-family: "Poppins", sans-serif;
+  }
 
  .backgroundLeft {
     position: fixed;
@@ -73,6 +84,7 @@ html {
 #msg-error {
 font-family: "Poppins", sans-serif;
 font-size: 16px;
+height:0px;
 color:white;
 display:flex;
 transition: ease-in 0.4s; 
