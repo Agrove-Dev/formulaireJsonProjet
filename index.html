@@ -10,6 +10,40 @@
     <title>Formulaire</title>
 </head>
 <body>
+<div id="bandeau-error">
+  <center>
+  <div id="msg-error">
+  </div>
+</center>
+</div>
+ 
+  <div id="login-out">
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="images/logo_green.webp" id="icon" alt="User Icon" />
+        </div>
+    
+        <!-- Login Form -->
+        
+          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+          <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+          <input type="submit" class="fadeIn fourth" value="Log In" onclick="log()">
+     
+    
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#" onclick="forgot()">Forgot Password?</a>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+  <div id="login-in">
 
     <div id="headBar">
         <div id="headTxt">AGROVE | Cultivons notre avenir</div>
@@ -253,6 +287,7 @@
     <div class="footer">
         
     </div>
+  </div>
 </body>
 <script src="form.js"></script>
 <script src="createForm.js"></script>
