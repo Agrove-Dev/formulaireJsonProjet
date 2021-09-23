@@ -7,6 +7,7 @@ let screenOut = document.getElementById("login-out");
 let screenIn = document.getElementById("login-in");
 let bandeau = document.getElementById("bandeau-error");
 let msgError = document.getElementById("msg-error");
+let alerter = document.getElementById("alerter");
 bandeau.style.padding = "0px";
 //END DOM INTERFACE
 
@@ -153,8 +154,8 @@ function initForm() {
         }
     }
 
-      //GET ALL VALUE OF BAD ASSOCIATION
-      for (var option of document.getElementById('selectBadAssociation').options) {
+    //GET ALL VALUE OF BAD ASSOCIATION
+    for (var option of document.getElementById('selectBadAssociation').options) {
         if (option.selected) {
             association[option.value] = false;
         }
@@ -170,18 +171,29 @@ function initForm() {
     plantingPeriod["startMonth"] = parseInt(document.getElementById("plantationStart").value);
     plantingPeriod["endMonth"] = parseInt(document.getElementById("plantationEnd").value);
 
-    let data = {
-        association,
-        "name": namePlant.value,
-        "description": descriptionPlant.value,
-        characteristic,
-        filtre,
-        flowingPeriod,
-        harvestPeriod,
-        plantingPeriod,
-        sowingPeriod
-    };
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    if (namePlant.value == "" || descriptionPlant.value == "" || characteristic["height"] == "" || characteristic["ph"] == "" || sowingPeriod["startMonth"] == "" || sowingPeriod["endMonth"] == "" || plantingPeriod["startMonth"] == "" || plantingPeriod["endMonth"] == "" || flowingPeriod["startMonth"] == "" || flowingPeriod["endMonth"] =="" || harvestPeriod["startMonth"] =="" || harvestPeriod["endMonth"] =="") {
+        customAlert.alert('Vous devez remplir toute les informations du formulaire.', 'Attention !')
+    } else {
+        let data = {
+            association,
+            "name": namePlant.value,
+            "description": descriptionPlant.value,
+            characteristic,
+            filtre,
+            flowingPeriod,
+            harvestPeriod,
+            plantingPeriod,
+            sowingPeriod
+        };
 
-    download("plant", data);
-    console.log("code by Lorenzo\n" + data);
+
+
+        download("plant", data);
+        console.log("code by Lorenzo\n" + data);
+    }
 }
+
+
+
