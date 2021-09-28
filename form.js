@@ -30,7 +30,9 @@ function log() {
         domDecoded.bandeau.style.display = "none";
         domDecoded.msgError.innerHTML = "";
         domDecoded.screenIn.style.visibility = "visible";
-        domDecoded.screenIn.style.display = "block";
+        //domDecoded.screenIn.style.display = "block";
+        //domDecoded.screenIn.style.height = "900px";
+        domDecoded.screenIn.style.width = "100%";
         domDecoded.screenOut.style.visibility = "hidden";
         domDecoded.screenOut.style.display = "none";
     } else {
@@ -211,11 +213,14 @@ function initForm() {
 
         download("plant", data);
         console.log("code by Lorenzo\n" + data);
+        characteristic.height = "";
+        domDecoded.namePlant.value = "";
+        domDecoded.descriptionPlant.value = "";
     }
 }
 
 function check(namePlant, descriptionPlant) {
-    if (namePlant != "" && descriptionPlant != "" && characteristic.ph != NaN && characteristic.height != "") {
+    if (namePlant != "" && descriptionPlant != "" && characteristic.height != "") {
         return true;
     } else {
         console.log("Mon name est : " + namePlant);

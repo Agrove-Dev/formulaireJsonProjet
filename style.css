@@ -2,20 +2,69 @@ html {
     margin: 0;
     width: 100%;
 }
+body {
+  transition: 1s;
+  zoom: 85%;
+  height: 100vh;
+}
 
+
+#headLogo {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color:#72d1a4;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.205);
+}
 #headBar {
-    height: 35px;
+    height: 15px;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     display: flex;
-
     align-items: center;
     justify-content: center;
     background-color:#72d1a4;
 }
+
+.btn, .btn-primary {
+  font-size:18px!important;
+  background-color: #72d1a4!important;
+  font-family: "Poppins", sans-serif;
+  border-color:  rgba(35, 158, 35, 0.726)!important;
+  width:200px!important;
+  font-weight: bold;
+  margin-left: -50px;
+}
+
+.btn:hover {
+  transition: ease-in 0.5s;
+  background-color: #7eecb9!important;
+
+}
+
+#bandeauTitle {
+  background-color: #72d1a5dc;
+  height: auto;
+  width: 30%;
+  margin:auto;
+  text-shadow: 4px 4px 4px 4px rgb(100, 4, 4);
+  font-family: "Poppins", sans-serif;
+  border-radius: 1px;
+  margin-bottom: -17px;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  border: solid rgba(126, 126, 126, 0.356) 1.7px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
 .alert  {
   display: none!important;
 }
+
 #tips {
   font-size: 12px;
   margin-top: 8px;
@@ -100,8 +149,12 @@ visibility: hidden;
 }
 
 #login-in {
-    display: none;
+  width:0%;
+    height: 0vh;
+    margin:0px;
+    padding:0px;
     visibility: hidden;
+    transition: ease-in 0.2s;
 }
 
 #login-out {
@@ -154,9 +207,19 @@ visibility: hidden;
     margin-top: 15px;
 }
 
+.beforeFooter {
+  height: 80px;
+  width: 50px;
+}
+
 .footer {
-    height: 100px;
-    width: 50px;
+    height: 50px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.747);
+    font-family: "Poppins", sans-serif;
+    display:flex;
+    justify-content: center;
+    font-size: 16px;
 }
 
 a {
@@ -242,6 +305,8 @@ a {
     font-size: 13px;
     -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
     box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    background-color: #72d1a5e5!important;
+    border-color:  rgba(35, 158, 35, 0.726)!important;
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
     margin: 5px 20px 40px 20px;
@@ -379,6 +444,10 @@ a {
     -moz-animation-delay: 1s;
     animation-delay: 1s;
   }
+
+  #btnHov:hover {
+    background-color: #90a098e5;
+  }
   
   /* Simple CSS3 Fade-in Animation */
   .underlineHover:after {
@@ -390,6 +459,10 @@ a {
     background-color: #72d1a4;
     content: "";
     transition: width 0.2s;
+  }
+
+  .underlineHover {
+    color:black;
   }
   
   .underlineHover:hover {
@@ -462,6 +535,7 @@ a {
   display: none;
   opacity: .8;
   position: fixed;
+  zoom:125%;
   top: 0px;
   left: 0px;
   background: #707070;

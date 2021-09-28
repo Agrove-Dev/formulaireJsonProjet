@@ -31,7 +31,7 @@
         
           <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
           <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In" onclick="log()">
+          <input type="submit" class="fadeIn fourth" id="btnHov" value="Se connecter" onclick="log()">
      
     
         <!-- Remind Passowrd -->
@@ -44,10 +44,12 @@
   </div>
 
   <div id="login-in">
+    <div id="headLogo"> <img src="images/logo_white.webp" width="200px" height="180px"/></div>
 
-    <div id="headBar">
+    <!-- <div id="headBar">
+     
         <div id="headTxt">Formulaire de création de plante</div>
-    </div>
+    </div> -->
     <div class="backgroundLeft">
         <img src="images/fd.jfif">
     </div>
@@ -62,6 +64,7 @@
       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
     </div>
 
+    <div id="bandeauTitle">Formulaire</div>
     <div class="nameOfPlant">
         <form>
         <div id="title">Nom de la plante</div>
@@ -284,11 +287,13 @@
 
 </form>
     <div class="validate">
-        <button type="button" class="btn btn-primary" onclick="initForm()" onclick="createForm()">Valider</button>
+        <button type="button" class="btn btn-primary" onclick="initForm()" onclick="createForm()">Créer la plante</button>
     </div>
 
+    <div class="beforeFooter">
+    </div>
     <div class="footer">
-        
+      Copyright 2021 - AGROVE | Cultivons notre avenir | Agriculture Urbaine Collaborative & Connectées
     </div>
   </div>
 </body>
