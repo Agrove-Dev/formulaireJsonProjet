@@ -21,10 +21,10 @@ function createCookie(){
 window.onload = function(){
   
     //for init an account
-    //var uname = 'admin';
-    //var pass = '123456';
+    var uname = 'AgroveDev';
+    var pass = 'Agr0v3fra';
   
-    //document.getElementById('login').value = uname;
-    //document.getElementById('password').value = pass;
+    document.getElementById('login').value = uname;
+    document.getElementById('password').value = pass;
   
   }

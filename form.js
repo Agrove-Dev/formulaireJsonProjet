@@ -1,87 +1,100 @@
 //DOM INTERFACE
-let namePlant = document.getElementById("exampleFormControlInput1");
-let descriptionPlant = document.getElementById("exampleFormControlInput2");
-let categorieSelected = document.querySelectorAll("selectCategorie");
-let characteristicHeight = document.getElementById("characteristicHeight");
-let screenOut = document.getElementById("login-out");
-let screenIn = document.getElementById("login-in");
-let bandeau = document.getElementById("bandeau-error");
-let msgError = document.getElementById("msg-error");
-let alerter = document.getElementById("alerter");
-bandeau.style.padding = "0px";
-//END DOM INTERFACE
+
+
+function initDom() {
+    let domDecoded = {};
+    domDecoded.screenOut = document.getElementById("login-out");
+    domDecoded.screenIn = document.getElementById("login-in");
+    domDecoded.bandeau = document.getElementById("bandeau-error");
+    domDecoded.msgError = document.getElementById("msg-error");
+    domDecoded.alerter = document.getElementById("alerter");
+    domDecoded.bandeau.style.padding = "0px";
+    domDecoded.namePlant = document.getElementById("exampleFormControlInput1");
+    domDecoded.descriptionPlant = document.getElementById("exampleFormControlInput2");
+    domDecoded.categorieSelected = document.querySelectorAll("selectCategorie");
+    domDecoded.characteristicHeight = document.getElementById("characteristicHeight");
+    return domDecoded;
+    //END DOM INTERFACE
+}
+
 
 function log() {
+
+    let domDecoded = initDom();
+
     if (adminId == idAcc.value && adminPwd == pwdAcc.value) {
         createCookie(); //FOR CREATE A COOKIE
-        msgError.style.visibility = "hidden";
-        bandeau.style.visibility = "hidden";
-        msgError.style.display = "none";
-        bandeau.style.display = "none";
-        msgError.innerHTML = "";
-        screenIn.style.visibility = "visible";
-        screenIn.style.display = "block";
-        screenOut.style.visibility = "hidden";
-        screenOut.style.display = "none";
+        domDecoded.msgError.style.visibility = "hidden";
+        domDecoded.bandeau.style.visibility = "hidden";
+        domDecoded.msgError.style.display = "none";
+        domDecoded.bandeau.style.display = "none";
+        domDecoded.msgError.innerHTML = "";
+        domDecoded.screenIn.style.visibility = "visible";
+        domDecoded.screenIn.style.display = "block";
+        domDecoded.screenOut.style.visibility = "hidden";
+        domDecoded.screenOut.style.display = "none";
     } else {
         if (bandeau.style.padding == "0px") {
-            msgError.style.display = "block";
-            bandeau.style.display = "block";
-            msgError.style.visibility = "visible";
-            bandeau.style.visibility = "visible";
-            msgError.innerHTML = "Identifiant ou mot de passe incorrect."
-            bandeau.style.padding = "10px";
-            msgError.style.height = "20px";
+            domDecoded.msgError.style.display = "block";
+            domDecoded.bandeau.style.display = "block";
+            domDecoded.msgError.style.visibility = "visible";
+            domDecoded.bandeau.style.visibility = "visible";
+            domDecoded.msgError.innerHTML = "Identifiant ou mot de passe incorrect."
+            domDecoded.bandeau.style.padding = "10px";
+            domDecoded.msgError.style.height = "20px";
             setTimeout(function () {
-                bandeau.style.padding = "0px";
-                msgError.style.height = "0px";
+                domDecoded.bandeau.style.padding = "0px";
+                domDecoded.msgError.style.height = "0px";
             }, 2000);
         } else {
             console.log("error")
-            msgError.style.display = "block";
-            bandeau.style.display = "block";
-            msgError.style.visibility = "visible";
-            bandeau.style.visibility = "visible";
-            msgError.innerHTML = "Identifiant ou mot de passe incorrect."
+            domDecoded.msgError.style.display = "block";
+            domDecoded.bandeau.style.display = "block";
+            domDecoded.msgError.style.visibility = "visible";
+            domDecoded.bandeau.style.visibility = "visible";
+            domDecoded.msgError.innerHTML = "Identifiant ou mot de passe incorrect."
             setTimeout(function () {
-                msgError.style.display = "none";
-                bandeau.style.display = "none";
-                msgError.style.visibility = "hidden";
-                bandeau.style.visibility = "hidden";
-                bandeau.style.padding = "0px";
-                msgError.style.height = "0px";
+                domDecoded.msgError.style.display = "none";
+                domDecoded.bandeau.style.display = "none";
+                domDecoded.msgError.style.visibility = "hidden";
+                domDecoded.bandeau.style.visibility = "hidden";
+                domDecoded.bandeau.style.padding = "0px";
+                domDecoded.msgError.style.height = "0px";
             }, 2000);
         }
     }
 }
 
 function forgot() {
+
+    let domDecoded = initDom();
+
     if (bandeau.style.padding == "0px") {
-        msgError.innerHTML = "Contacter le développeur pour récupérer vos identifiants."
-        msgError.style.display = "block";
-        bandeau.style.display = "block";
-        msgError.style.visibility = "visible";
-        bandeau.style.visibility = "visible";
-        bandeau.style.padding = "10px";
-        msgError.style.height = "20px";
+        domDecoded.msgError.innerHTML = "Contacter le développeur pour récupérer vos identifiants."
+        domDecoded.msgError.style.display = "block";
+        domDecoded.bandeau.style.display = "block";
+        domDecoded.msgError.style.visibility = "visible";
+        domDecoded.bandeau.style.visibility = "visible";
+        domDecoded.bandeau.style.padding = "10px";
+        domDecoded.msgError.style.height = "20px";
         setTimeout(function () {
-            bandeau.style.padding = "0px";
-            msgError.style.height = "0px";
+            domDecoded.bandeau.style.padding = "0px";
+            domDecoded.msgError.style.height = "0px";
         }, 2000);
     } else {
         console.log("error")
-        msgError.innerHTML = "Contacter le développeur pour récupérer vos identifiants."
-        msgError.style.display = "block";
-        bandeau.style.display = "block";
-        msgError.style.visibility = "visible";
-        bandeau.style.visibility = "visible";
+        domDecoded.msgError.innerHTML = "Contacter le développeur pour récupérer vos identifiants."
+        domDecoded.msgError.style.display = "block";
+        domDecoded.bandeau.style.display = "block";
+        domDecoded.msgError.style.visibility = "visible";
+        domDecoded.bandeau.style.visibility = "visible";
         setTimeout(function () {
-            msgError.style.display = "none";
-            bandeau.style.display = "none";
-            msgError.style.visibility = "hidden";
-            bandeau.style.visibility = "hidden";
-            bandeau.style.padding = "0px";
-            msgError.style.height = "0px";
+            domDecoded.msgError.style.display = "none";
+            domDecoded.bandeau.style.display = "none";
+            domDecoded.msgError.style.visibility = "hidden";
+            domDecoded.bandeau.style.visibility = "hidden";
+            domDecoded.bandeau.style.padding = "0px";
+            domDecoded.msgError.style.height = "0px";
         }, 2000);
     }
 
@@ -90,6 +103,12 @@ function forgot() {
 var association = new Object();
 
 var characteristic = new Object();
+characteristic["exhibition"] = NaN;
+characteristic["height"] = NaN;
+characteristic["ph"] = NaN;
+characteristic["rusticite"] = NaN;
+characteristic["usda"] = NaN;
+characteristic["water"] = NaN;
 
 var filtre = new Object();
 
@@ -104,6 +123,8 @@ var plantingPeriod = new Object();
 var sowingPeriod = new Object();
 
 function initForm() {
+
+    let = domDecoded = initDom(); //REINIT DOM
 
     //GET ALL VALUE OF FILTRE
     for (var option of document.getElementById('selectCategorie').options) {
@@ -171,15 +192,15 @@ function initForm() {
     plantingPeriod["startMonth"] = parseInt(document.getElementById("plantationStart").value);
     plantingPeriod["endMonth"] = parseInt(document.getElementById("plantationEnd").value);
 
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    if (namePlant.value == "" || descriptionPlant.value == "" || characteristic["height"] == "" || characteristic["ph"] == "" || sowingPeriod["startMonth"] == "" || sowingPeriod["endMonth"] == "" || plantingPeriod["startMonth"] == "" || plantingPeriod["endMonth"] == "" || flowingPeriod["startMonth"] == "" || flowingPeriod["endMonth"] =="" || harvestPeriod["startMonth"] =="" || harvestPeriod["endMonth"] =="") {
-        customAlert.alert('Vous devez remplir toute les informations du formulaire.', 'Attention !')
-    } else {
+    console.log("Characteristic : " + characteristic.ph);
+    console.log("Name / Description : " + domDecoded.namePlant.value + " " + domDecoded.descriptionPlant.value);
+    console.log(check(domDecoded.namePlant.value, domDecoded.descriptionPlant.value));
+    console.log("Type de namePlant : "+ typeof(domDecoded.namePlant.value));
+    if(check(domDecoded.namePlant.value, domDecoded.descriptionPlant.value) == true) {
         let data = {
             association,
-            "name": namePlant.value,
-            "description": descriptionPlant.value,
+            "name": domDecoded.namePlant.value,
+            "description": domDecoded.descriptionPlant.value,
             characteristic,
             filtre,
             flowingPeriod,
@@ -188,12 +209,26 @@ function initForm() {
             sowingPeriod
         };
 
-
-
         download("plant", data);
         console.log("code by Lorenzo\n" + data);
     }
 }
 
-
+function check(namePlant, descriptionPlant) {
+    if (namePlant != "" && descriptionPlant != "" && characteristic.ph != NaN && characteristic.height != "") {
+        return true;
+    } else {
+        console.log("Mon name est : " + namePlant);
+        console.log("Ma description est : " + descriptionPlant);
+        console.log("Ma characteristic ph est : " + characteristic.ph);
+        console.log("Ma characteristic ph est : " + characteristic["ph"]);
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        customAlert.alert('Veuillez remplir tous les champs du formulaire !', 'Attention !');
+        namePlant.value = "";
+        descriptionPlant.value = "";
+        characteristic["ph"] = NaN;
+        return false;
+    }
+}
 
