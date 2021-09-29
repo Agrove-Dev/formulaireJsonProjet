@@ -37,7 +37,7 @@ function log() {
         domDecoded.screenOut.style.visibility = "hidden";
         domDecoded.screenOut.style.display = "none";
     } else {
-        if (bandeau.style.padding == "0px") {
+        if (domDecoded.bandeau.style.padding == "0px") {
             domDecoded.msgError.style.display = "block";
             domDecoded.bandeau.style.display = "block";
             domDecoded.msgError.style.visibility = "visible";
@@ -72,7 +72,7 @@ function forgot() {
 
     let domDecoded = initDom();
 
-    if (bandeau.style.padding == "0px") {
+    if (domDecoded.bandeau.style.padding == "0px") {
         domDecoded.msgError.innerHTML = "Contacter le développeur pour récupérer vos identifiants."
         domDecoded.msgError.style.display = "block";
         domDecoded.bandeau.style.display = "block";
