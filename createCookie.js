@@ -21,8 +21,8 @@ function createCookie(){
 window.onload = function(){
   
     //for init an account
-    var uname = 'AgroveDev';
-    var pass = 'Agr0v3fra';
+    //var uname = 'AgroveDev';
+    //var pass = 'Agr0v3fra';
   
     document.getElementById('login').value = uname;
     document.getElementById('password').value = pass;
